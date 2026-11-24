@@ -553,6 +553,7 @@ function showSlides(n) {
     padding: 16px;
     opacity: 0;
     visibility: hidden;
+    pointer-events: none;                /* lets clicks pass through to the page behind */
     transition: opacity 0.8s ease, visibility 0s linear 0.8s;
   }
   #du-notice-overlay.du-show {
@@ -561,6 +562,7 @@ function showSlides(n) {
     transition: opacity 0.8s ease, visibility 0s;
   }
   #du-notice-box {
+    pointer-events: auto;                /* the popup itself still catches clicks, and has no close button */
     background: #ffffff;
     color: #222222;
     max-width: 560px;
@@ -585,12 +587,12 @@ function showSlides(n) {
   #du-notice-box p:last-child { margin-bottom: 0; }
 </style>
 
-<div id="du-notice-overlay" role="dialog" aria-modal="true" aria-labelledby="du-notice-title">
+<div id="du-notice-overlay" role="dialog" aria-labelledby="du-notice-title">
   <div id="du-notice-box">
     <h2 id="du-notice-title">A Message from Dr. Universe</h2>
     <p>Dr. Universe was founded as an academically inclined competition for women with doctorates, offering them a platform to showcase their careers, achievements, and philanthropic work. We have always been a separate and distinct competition, and we have never sought to present ourselves as the Miss Universe pageant.</p>
     <p>Miss Universe has since removed its age cap and now welcomes mature women with advanced degrees to compete. With that opportunity now available, we feel that Dr. Universe has fulfilled its purpose, and we wish to remain respectful of the Miss Universe organization and its intellectual property.</p>
-    <p>Dr. Universe will therefore conclude at the end of 2026, and no new titleholder will be crowned. We are deeply grateful to every contestant, titleholder, supporter, and friend who has been part of this journey.</p>
+    <p>Dr. Universe will therefore conclude at the end of 2026, and no new titleholder will be crowned. Our reigning titleholder, Dr. Janelle Caldwell, will be our final Dr. Universe. We are deeply grateful to every contestant, titleholder, supporter, and friend who has been part of this journey.</p>
   </div>
 </div>
 
